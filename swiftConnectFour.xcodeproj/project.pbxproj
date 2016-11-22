@@ -190,7 +190,7 @@
 				TargetAttributes = {
 					4FCE27591A03FCCC006295B5 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 9G9T3GHV4E;
+						DevelopmentTeam = WY8VUHZ59L;
 						LastSwiftMigration = 0810;
 					};
 					4FCE27721A03FCCC006295B5 = {
@@ -383,10 +383,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9G9T3GHV4E;
+				DEVELOPMENT_TEAM = WY8VUHZ59L;
 				INFOPLIST_FILE = swiftConnectFour/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "egu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = tirta.swiftConnectFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -396,10 +397,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9G9T3GHV4E;
+				DEVELOPMENT_TEAM = WY8VUHZ59L;
 				INFOPLIST_FILE = swiftConnectFour/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "egu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = tirta.swiftConnectFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -31,9 +31,14 @@ class GameScene: SKScene {
         let layerPosition = CGPoint(
             x: -TileWidth * CGFloat(NumColumns) / 2,
             y: -TileHeight * CGFloat(NumRows) / 2)
-        let tilesLayer = SKNode()
+       // let tilesLayer = SKNode()
         boardLayer.position = layerPosition
+        //print ("Trying to redraw")
+        boardLayer.zPosition=1
         addChild(boardLayer)
+     //   print ("Trying to redraw 2")
+        
+       // boardLayer.setNeedsFocusUpdate()
     }
 
     func addTiles() {
@@ -41,13 +46,14 @@ class GameScene: SKScene {
             for column in 0..<NumColumns {
                 let tileNode = SKSpriteNode(imageNamed: "Tile")
                 tileNode.position = pointForColumn(column, row: row)
+                tileNode.zPosition = 1
                 boardLayer.addChild(tileNode)
             }
         }
     }
 
     func addSpriteForGamePiece(column: Int, _ row: Int, type: GamePieceType) {
-        let addedGamePiece = GamePiece(type: type)
+        //let addedGamePiece = GamePiece(type: type)
 
         var pieceNode = SKSpriteNode(imageNamed: "Red")
         if (type == GamePieceType.black){
@@ -55,6 +61,7 @@ class GameScene: SKScene {
         }
 
         pieceNode.position = pointForColumn(column, row:NumRows)
+        pieceNode.zPosition=2 //Without this, it may go to the shade
 
         boardLayer.addChild(pieceNode)
         //animation
@@ -68,7 +75,7 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: boardLayer)
-        let (success, column, row) = convertPoint(location!)
+        let (success, column, _) = convertPoint(location!)
         if success {
             if isFinished {
                 return
