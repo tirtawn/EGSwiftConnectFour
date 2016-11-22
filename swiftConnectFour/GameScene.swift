@@ -65,7 +65,7 @@ class GameScene: SKScene {
 
         boardLayer.addChild(pieceNode)
         //animation
-        let actualDuration = CGFloat(2.0)
+        let actualDuration = CGFloat(1.0)
         // Create the actions
         let actionMove = SKAction.move(to: pointForColumn(column, row: row), duration: TimeInterval(actualDuration))
 
