@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02B641E11DE5475F00F5D966 /* gameover.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 02B641E01DE5452700F5D966 /* gameover.m4a */; };
 		4F7D208D1A09640F00FC885B /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4F7D208C1A09640F00FC885B /* sprites.atlas */; };
 		4FCE27601A03FCCC006295B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCE275F1A03FCCC006295B5 /* AppDelegate.swift */; };
 		4FCE27641A03FCCC006295B5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCE27631A03FCCC006295B5 /* GameScene.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B641E01DE5452700F5D966 /* gameover.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.m4a; sourceTree = "<group>"; };
 		4F7D208C1A09640F00FC885B /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		4FCE275A1A03FCCC006295B5 /* swiftConnectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftConnectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCE275E1A03FCCC006295B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		4FCE27851A03FD36006295B5 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				02B641E01DE5452700F5D966 /* gameover.m4a */,
 				4FCE27861A03FD36006295B5 /* background-music-aac.caf */,
 				4FCE27871A03FD36006295B5 /* pew-pew-lei.caf */,
 			);
@@ -227,6 +230,7 @@
 				4F7D208D1A09640F00FC885B /* sprites.atlas in Resources */,
 				4FCE27881A03FD36006295B5 /* background-music-aac.caf in Resources */,
 				4FCE276E1A03FCCC006295B5 /* LaunchScreen.xib in Resources */,
+				02B641E11DE5475F00F5D966 /* gameover.m4a in Resources */,
 				4FCE276B1A03FCCC006295B5 /* Images.xcassets in Resources */,
 				4FCE27691A03FCCC006295B5 /* Main.storyboard in Resources */,
 				4FCE27891A03FD36006295B5 /* pew-pew-lei.caf in Resources */,

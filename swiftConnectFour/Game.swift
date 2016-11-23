@@ -72,24 +72,21 @@ class Game {
     func checkWinCondition (_ column: Int, row: Int) {
 
 
-        let alert = UIAlertController(title: "Four In a Row! Game Over", message:"Game Over", preferredStyle: .alert)
-
-        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
-        
+         
         for row in 0..<gameBoard.rows {
             for column in 0..<gameBoard.columns {
                 //horizontal
                 if(isLinearMatch(column: column, row: row, stepX: 1, stepY: 0)) {
                     isFinished = true
                     
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                    
                 }
                 
                 //vertical
                 if(isLinearMatch(column: column, row: row, stepX: 0, stepY: 1)) {
                     isFinished = true
                     
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                    
                     
                     
                 }
@@ -97,15 +94,16 @@ class Game {
                 //diagonal
                 if(isLinearMatch(column: column, row: row, stepX: 1, stepY: 1)) {
                     isFinished = true
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                    
+
                     
                 }
                 
                 //second diagonal
                 if(isLinearMatch(column: column, row: row, stepX: 1, stepY: -1)) {
                     isFinished = true
-                    // alert.show()
-                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                    
+
                     
                 }
             }
@@ -135,4 +133,7 @@ class Game {
         
         gameBoard[column, row] = newGamePiece
     }
+    
+
+    
 }

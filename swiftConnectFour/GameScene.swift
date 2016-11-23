@@ -7,6 +7,10 @@
 //
 
 import SpriteKit
+import AVFoundation
+
+var player: AVAudioPlayer?
+
 
 class GameScene: SKScene {
     var game: Game!
@@ -65,7 +69,7 @@ class GameScene: SKScene {
 
         boardLayer.addChild(pieceNode)
         //animation
-        let actualDuration = CGFloat(1.0)
+        let actualDuration = CGFloat(1.5)
         // Create the actions
         let actionMove = SKAction.move(to: pointForColumn(column, row: row), duration: TimeInterval(actualDuration))
 
@@ -78,6 +82,8 @@ class GameScene: SKScene {
         let (success, column, _) = convertPoint(location!)
         if success {
             if isFinished {
+                
+                
                 return
             }
             if let emptyRow = game.findEmptyPositionInColumn(column: column){
@@ -90,6 +96,15 @@ class GameScene: SKScene {
                 }
 
                 game.checkWinCondition(column, row: emptyRow)
+                
+                if (isFinished)
+                {
+                    let alert = UIAlertController(title: "Four In a Row! Game Over", message:"Game Over", preferredStyle: .alert)
+                    
+                    playGameOverSound()
+                    alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+                     UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)             
+                }
             }
         }
     }
@@ -111,5 +126,19 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
+    }
+    
+    func playGameOverSound() {
+        let url = Bundle.main.url(forResource: "gameover", withExtension: "m4a")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
